@@ -12,7 +12,7 @@ Cube Rushhhh!!!!
 You can publish the cube game to Android or IOS platform
 
 ## Help
-There is a readme.md in assets
+There is a [readme.md](https://github.com/SlowFeather/CubeRushGame/blob/main/Assets/readme.md) in assets
 
 ## Thanks
 This project uses [JEngine](https://github.com/JasonXuDeveloper/JEngine)
