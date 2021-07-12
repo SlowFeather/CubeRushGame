@@ -1,0 +1,302 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7882bd278763c45f49cef7deeae496e5, type: 3}
+  m_Name: Manifest
+  m_EditorClassIdentifier: 
+  activeVariants: []
+  assets:
+  - bundle: 29
+    dir: 0
+    name: dog.controller
+  - bundle: 28
+    dir: 1
+    name: HotUpdateScripts.bytes
+  - bundle: 1
+    dir: 2
+    name: dog.mat
+  - bundle: 15
+    dir: 3
+    name: floor01.mat
+  - bundle: 18
+    dir: 4
+    name: block01.mat
+  - bundle: 6
+    dir: 5
+    name: map01.mat
+  - bundle: 27
+    dir: 6
+    name: impact.ttf
+  - bundle: 26
+    dir: 7
+    name: floor01.prefab
+  - bundle: 9
+    dir: 8
+    name: role0.prefab
+  - bundle: 3
+    dir: 9
+    name: dog.prefab
+  - bundle: 16
+    dir: 9
+    name: floor01.prefab
+  - bundle: 17
+    dir: 10
+    name: InstantiateDemo.prefab
+  - bundle: 11
+    dir: 10
+    name: UI Root.prefab
+  - bundle: 10
+    dir: 11
+    name: uiview_mainview.prefab
+  - bundle: 5
+    dir: 11
+    name: uiview_startview.prefab
+  - bundle: 20
+    dir: 11
+    name: uiview_testview.prefab
+  - bundle: 7
+    dir: 10
+    name: uiview_btnview.prefab
+  - bundle: 4
+    dir: 10
+    name: uiview_crtestview.prefab
+  - bundle: 24
+    dir: 12
+    name: Demo.unity
+  - bundle: 21
+    dir: 12
+    name: Game.unity
+  - bundle: 12
+    dir: 12
+    name: MainGame.unity
+  - bundle: 8
+    dir: 12
+    name: UIDemo.unity
+  - bundle: 14
+    dir: 13
+    name: Localization.csv
+  - bundle: 19
+    dir: 14
+    name: ring.png
+  - bundle: 30
+    dir: 15
+    name: bBlue.png
+  - bundle: 30
+    dir: 15
+    name: bRed.png
+  - bundle: 30
+    dir: 15
+    name: round.png
+  - bundle: 30
+    dir: 15
+    name: "\u5F00\u59CB.png"
+  - bundle: 30
+    dir: 15
+    name: "\u5F97\u5206.png"
+  - bundle: 30
+    dir: 15
+    name: "\u64AD\u653E.png"
+  - bundle: 30
+    dir: 15
+    name: "\u7BAD\u5934.png"
+  - bundle: 30
+    dir: 15
+    name: "\u8BBE\u7F6E.png"
+  - bundle: 30
+    dir: 15
+    name: "\u8D2D\u4E70.png"
+  - bundle: 30
+    dir: 15
+    name: "\u91D1\u5E01.png"
+  - bundle: 25
+    dir: 16
+    name: map01.png
+  - bundle: 2
+    dir: 17
+    name: Title2_bg.png
+  - bundle: 2
+    dir: 17
+    name: small title02_bg.png
+  bundles:
+  - deps: 
+    hash: 84be42c88e2d8749aba556186a24ecd8
+    id: 0
+    len: 54491
+    name: 15b73537d60897b033d99ac9e0849548.unity3d
+  - deps: 16000000
+    hash: 31d5124b8d02cb52e3ee121e7b5203b2
+    id: 1
+    len: 3096
+    name: 19c648d67a1dd37d3961edc7015a85df.unity3d
+  - deps: 
+    hash: 1e74020010e1790f457236880c882309
+    id: 2
+    len: 136329
+    name: 19d167e7859a3e1469e606027ce3feac.unity3d
+  - deps: 000000000100000016000000170000001d000000
+    hash: b5976f635a1322d2a80e768e8c82e0fb
+    id: 3
+    len: 3376
+    name: 1e167c8e9809aba8a8fd6680449d75ec.unity3d
+  - deps: 
+    hash: b4bc38710a3d863641d6fc33a6165cf1
+    id: 4
+    len: 8221
+    name: 21711ddd3e79ff58e40082dd15c8c385.unity3d
+  - deps: 1e000000
+    hash: 5cde5ea925b2f165418da7879055aa27
+    id: 5
+    len: 21106
+    name: 22c5d7d2f95af8e8d186b31b111b39a0.unity3d
+  - deps: 19000000
+    hash: d5ac51daab94fe9889e10409c2622027
+    id: 6
+    len: 2384
+    name: 246355ba239e7a6140d47e3993587fa0.unity3d
+  - deps: 1b000000
+    hash: 7ba3006d8d45e14231c97b36f1763a08
+    id: 7
+    len: 6775
+    name: 2cc9d2d03b72c42674e4411525c24790.unity3d
+  - deps: 
+    hash: 1b613bd79c095007c490beb82401f66e
+    id: 8
+    len: 4388
+    name: 2f0b45fb2f64cd4503a4b7b2fc975a94.unity3d
+  - deps: 000000000100000016000000
+    hash: 45c75849511c625fdbe34ddac5b948cf
+    id: 9
+    len: 46998
+    name: 3271feecb8bcb193a7f32f0e728bc8cf.unity3d
+  - deps: 1e000000
+    hash: a186040d4a28779705f90e81b9d44d1c
+    id: 10
+    len: 7360
+    name: 32742491099165f7fbf85a36a78817df.unity3d
+  - deps: 
+    hash: 5734cb8fff4969fbee601ebb0e78f7a8
+    id: 11
+    len: 5109
+    name: 569657f6619057b5506ced6e775264fa.unity3d
+  - deps: 
+    hash: 6400a973921086a363f8959f0531bc11
+    id: 12
+    len: 13466
+    name: 56e95182487e0e098c852a680845a3fa.unity3d
+  - deps: 
+    hash: dc89461d32b0e963005426fc11e3e324
+    id: 13
+    len: 4049
+    name: 60c0fbb2f206b234759e1cb07b41f740.unity3d
+  - deps: 
+    hash: 16d52258d7310bfa120567056a0f54aa
+    id: 14
+    len: 1267
+    name: 6409362d6eb671d168aa187271cd33a8.unity3d
+  - deps: 0d000000
+    hash: 0ddf48478add7550f53a80d03092ab98
+    id: 15
+    len: 3333
+    name: 65d4d8290f3d065601de3a58dbffb804.unity3d
+  - deps: 0d0000000f000000
+    hash: 4e4d3bf8c07c339079660032eb7cfe08
+    id: 16
+    len: 8377
+    name: 78098f4a50973feb48f85a035e33661e.unity3d
+  - deps: 
+    hash: cb13a654441f7599e59499eb8fcf6e7f
+    id: 17
+    len: 2796
+    name: 953a764401fc4bf6d04c1c23d45b2e43.unity3d
+  - deps: 
+    hash: d8e049b6f8c7507e355e8d8575727714
+    id: 18
+    len: 3825
+    name: b101c2915df2719d857940d2781f61f5.unity3d
+  - deps: 
+    hash: 84ef56e38c9fe1168f54eb787097683a
+    id: 19
+    len: 6820
+    name: b7b80dcad2703bc7e104f795b95128d7.unity3d
+  - deps: 
+    hash: 930ea0008d221d3b0f19d378c9b05760
+    id: 20
+    len: 9919
+    name: bae243c3824b0b24fce3f6818e7c8971.unity3d
+  - deps: 1b000000
+    hash: 17d5bdb38661f110856b088a5dfeb190
+    id: 21
+    len: 34230
+    name: ceddc0c9b3c8bf92a5649c7282074eed.unity3d
+  - deps: 
+    hash: 89a84a83422b143f72a9dc5116555a84
+    id: 22
+    len: 3973
+    name: d74b5f37bd3aef200ac9ecc6dc00079c.unity3d
+  - deps: 
+    hash: 32e420879ad3a03f6f252b94eac4ddac
+    id: 23
+    len: 6052
+    name: d8eb6e43dcae8b3c68785e89482aac73.unity3d
+  - deps: 
+    hash: cd718ffc4854fc119a3c500a31fcdf94
+    id: 24
+    len: 12886
+    name: de318d056ae07a875bf329ffe7665717.unity3d
+  - deps: 
+    hash: 2eb78646e8e41da1ce1709f981155e2d
+    id: 25
+    len: 2926
+    name: e747e3825d8a229fd7ac046fdac91d24.unity3d
+  - deps: 0600000019000000
+    hash: fd945983c3a5e5e59261011a8be6a075
+    id: 26
+    len: 3466
+    name: e9a5b1782ccbf0c66ef96985f016c58d.unity3d
+  - deps: 
+    hash: bacb8a58a70cb70d0aeb9a86714f726e
+    id: 27
+    len: 129546
+    name: f027f62d736f2b9930b079d86f3b90c2.unity3d
+  - deps: 
+    hash: 59eff4268696a0366ba182e17f1ef52a
+    id: 28
+    len: 161709
+    name: f1e9148d33abaae32bb165f217c22e91.unity3d
+  - deps: 17000000
+    hash: ca05179280d1491b6d8998cf1b8596b3
+    id: 29
+    len: 4712
+    name: f9039cec8841b665034fe8c4f7f889e3.unity3d
+  - deps: 
+    hash: 9e4b87ee3f9aafa9499ad04869d3f0c8
+    id: 30
+    len: 27966
+    name: ff7bcd27d2307689fad4752a0e492410.unity3d
+  dirs:
+  - Assets/HotUpdateResources/Controller/Scene/Cube
+  - Assets/HotUpdateResources/Dll
+  - Assets/HotUpdateResources/Material/model/dog
+  - Assets/HotUpdateResources/Material/model/floor01
+  - Assets/HotUpdateResources/Material/model/floor02
+  - Assets/HotUpdateResources/Material/model/map
+  - Assets/HotUpdateResources/Other
+  - Assets/HotUpdateResources/Prefab/Game/Game/Ground
+  - Assets/HotUpdateResources/Prefab/Game/Game/Role
+  - Assets/HotUpdateResources/Prefab/Game/Start
+  - Assets/HotUpdateResources/Prefab
+  - Assets/HotUpdateResources/Prefab/UI
+  - Assets/HotUpdateResources/Scene
+  - Assets/HotUpdateResources/TextAsset
+  - Assets/HotUpdateResources/UI/CubeRushGame/FX
+  - Assets/HotUpdateResources/UI/CubeRushGame/Sprite
+  - Assets/HotUpdateResources/UI/CubeRushGame/Texture/Map/map01
+  - Assets/HotUpdateResources/UI
