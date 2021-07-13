@@ -31,7 +31,7 @@ ExportedObj/
 .consulo/
 *.csproj
 *.unityproj
-*.sln
+# *.sln
 *.suo
 *.tmp
 *.user
@@ -43,6 +43,11 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+
+/HotUpdateScripts/obj/*
+/HotUpdateScripts/.vs/*
+*.csproj
+
 
 # Unity3D generated meta files
 *.pidb.meta
