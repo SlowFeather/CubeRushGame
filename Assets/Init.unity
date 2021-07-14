@@ -373,7 +373,7 @@ MonoBehaviour:
   _step: 0
   baseURL: http://127.0.0.1/DLC/
   gameScene: MainGame.unity
-  development: 0
+  development: 1
 --- !u!4 &964396227
 Transform:
   m_ObjectHideFlags: 0

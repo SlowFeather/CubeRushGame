@@ -19,7 +19,16 @@ namespace HotUpdateScripts
             this.FrameMode = false;
             this.Frequency = 10;
         }
+        public void StopFollow()
+        {
+            this.Pause();
+        }
 
+        public void ContinueFollow()
+        {
+            this.Resume();
+
+        }
         public override void Loop()
         {
             if (roleGameObject == null)

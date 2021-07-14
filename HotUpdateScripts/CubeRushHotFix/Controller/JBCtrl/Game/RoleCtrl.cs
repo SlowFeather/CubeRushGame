@@ -45,6 +45,23 @@ namespace HotUpdateScripts
 
         }
 
+        /// <summary>
+        /// 停止角色一切动作
+        /// </summary>
+        public void OnRoleStop()
+        {
+            roleMonoCtrl.StopRole();
+            
+        }
+        /// <summary>
+        /// 继续角色动作
+        /// </summary>
+        public void OnRoleContinue()
+        {
+            roleMonoCtrl.ContinueRole();
+
+        }
+
         public void OnSlideLeft()
         {
             Log.Print("OnSlideLeft");

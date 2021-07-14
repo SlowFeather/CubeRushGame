@@ -11,18 +11,21 @@ namespace HotUpdateScripts
     public class MainView: JBehaviour
     {
         public Button stopBtn;
+        public Button continueBtn;
+
         public Button backBtn;
 
         public Button leftBtn;
         public Button rightBtn;
+
+
         public override void Init()
         {
             stopBtn.onClick.AddListener(StopBtnFunction);
             backBtn.onClick.AddListener(BackBtnFunction);
             leftBtn.onClick.AddListener(LeftBtnFunction);
             rightBtn.onClick.AddListener(RightBtnFunction);
-
-
+            continueBtn.onClick.AddListener(ContinueBtnFunction);
         }
 
         private void RightBtnFunction()
@@ -48,7 +51,14 @@ namespace HotUpdateScripts
             ModuleManager.Instance.GetModule<MainModule>().OnStopBtnFunction();
 
         }
+        /// <summary>
+        /// 点击了继续按钮
+        /// </summary>
+        private void ContinueBtnFunction()
+        {
+            ModuleManager.Instance.GetModule<MainModule>().OnContinueBtnFunction();
 
+        }
         public override void Run()
         {
             

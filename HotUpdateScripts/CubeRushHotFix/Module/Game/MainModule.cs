@@ -145,6 +145,15 @@ namespace HotUpdateScripts
         public void OnStopBtnFunction()
         {
             Log.Print("点击了停止");
+            roleGameObject.GetJBehaviour<RoleCtrl>().OnRoleStop();
+            Game.mainCamera.transform.gameObject.GetJBehaviour<CameraCtrl>().StopFollow();
+        }
+
+        public void OnContinueBtnFunction()
+        {
+            Log.Print("点击了继续");
+            roleGameObject.GetJBehaviour<RoleCtrl>().OnRoleContinue();
+            Game.mainCamera.transform.gameObject.GetJBehaviour<CameraCtrl>().ContinueFollow();
 
         }
 

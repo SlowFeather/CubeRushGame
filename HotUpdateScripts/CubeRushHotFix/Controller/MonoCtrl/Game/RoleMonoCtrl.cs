@@ -35,7 +35,12 @@ namespace HotUpdateScripts
 		public MoveState nextMoveState = MoveState.Straight;
 
 
+		/// <summary>
+		/// 角色控制器
+		/// </summary>
 		public RoleCtrl roleCtrl;
+
+		private Coroutine rolerCoroutine;
 
 		private void Start()
         {
@@ -47,6 +52,19 @@ namespace HotUpdateScripts
         {
 			RoleMove();
 		}
+
+		public void StopRole()
+        {
+			Time.timeScale = 0;
+
+		}
+
+		public void ContinueRole()
+        {
+			Time.timeScale = 1;
+
+		}
+
 		/// <summary>
 		/// 转弯方法
 		/// </summary>
@@ -65,6 +83,9 @@ namespace HotUpdateScripts
 			}
 		}
 
+		/// <summary>
+		/// 直线方法
+		/// </summary>
 		public void GoStraight()
         {
 			nextMoveState = MoveState.Straight;
@@ -98,7 +119,8 @@ namespace HotUpdateScripts
 
 		public void StartMove()
         {
-			StartCoroutine(MoveCurrency(new Vector3(role.transform.position.x, role.transform.position.y, role.transform.position.z + 1f), Vector3.right));
+			rolerCoroutine= StartCoroutine(MoveCurrency(new Vector3(role.transform.position.x, role.transform.position.y, role.transform.position.z + 1f), Vector3.right));
+			//StartCoroutine(MoveCurrency(new Vector3(role.transform.position.x, role.transform.position.y, role.transform.position.z + 1f), Vector3.right));
 		}
 
 		IEnumerator MoveCurrency(Vector3 endp,Vector3 axis,bool needReSet=true)

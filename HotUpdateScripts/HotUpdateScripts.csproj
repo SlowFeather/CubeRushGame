@@ -31,11 +31,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CubeRushHotFix\GarbageFolder\HeroCtrl.cs" />
-    <Compile Include="CubeRushHotFix\JBCtrl\Game\CameraCtrl.cs" />
+    <Compile Include="CubeRushHotFix\Controller\JBCtrl\Game\CameraCtrl.cs" />
     <Compile Include="CubeRushHotFix\Game.cs" />
-    <Compile Include="CubeRushHotFix\JBCtrl\Game\RoleCtrl.cs" />
-    <Compile Include="CubeRushHotFix\JBCtrl\Mono\RoleMonoCtrl.cs" />
-    <Compile Include="CubeRushHotFix\JBCtrl\Mono\SliderTouchMonoCtrl.cs" />
+    <Compile Include="CubeRushHotFix\Controller\JBCtrl\Game\RoleCtrl.cs" />
+    <Compile Include="CubeRushHotFix\Controller\MonoCtrl\Game\RoleMonoCtrl.cs" />
+    <Compile Include="CubeRushHotFix\Controller\MonoCtrl\Game\SliderTouchMonoCtrl.cs" />
     <Compile Include="CubeRushHotFix\Module\Example\Example_Module.cs" />
     <Compile Include="CubeRushHotFix\Module\Framework\BusinessModule.cs" />
     <Compile Include="CubeRushHotFix\Module\Framework\EventTable.cs" />
@@ -47,7 +47,7 @@
     <Compile Include="CubeRushHotFix\Module\ModuleDef.cs" />
     <Compile Include="CubeRushHotFix\Module\Game\MainModule.cs" />
     <Compile Include="CubeRushHotFix\Module\Game\StartModule.cs" />
-    <Compile Include="CubeRushHotFix\MonoCtrl\CameraFollow.cs" />
+    <Compile Include="CubeRushHotFix\Controller\MonoCtrl\Game\CameraFollow.cs" />
     <Compile Include="CubeRushHotFix\UI\View\MainView.cs" />
     <Compile Include="CubeRushHotFix\UI\View\StartView.cs" />
     <Compile Include="CubeRushHotFix\UI\View\TestView.cs" />
