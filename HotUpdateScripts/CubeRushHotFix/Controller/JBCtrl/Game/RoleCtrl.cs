@@ -12,9 +12,15 @@ namespace HotUpdateScripts
     public class RoleCtrl: JBehaviour
     {
         /// <summary>
-        /// 角色移动控制脚本
+        /// 角色碰撞脚本
         /// </summary>
 		RoleMonoCtrl roleMonoCtrl;
+
+        /// <summary>
+        /// 角色移动控制脚本
+        /// </summary>
+        RoleMove roleMove;
+
         /// <summary>
         /// 滑动屏幕处理
         /// </summary>
@@ -22,27 +28,26 @@ namespace HotUpdateScripts
 
         public override void Init()
         {
-
-        }
-        public override void Run()
-        {
-			//挂载Mono脚本来辅助运行
-			roleMonoCtrl=this.gameObject.AddComponent<RoleMonoCtrl>();
+            roleMove = this.gameObject.CreateJBehaviour<RoleMove>();
+            //挂载Mono脚本来辅助运行
             sliderTouchMonoCtrl = this.gameObject.AddComponent<SliderTouchMonoCtrl>();
-
+            roleMonoCtrl = this.gameObject.AddComponent<RoleMonoCtrl>();
             roleMonoCtrl.roleCtrl = this;
 
             sliderTouchMonoCtrl.OnSlideLeft += OnSlideLeft;
             sliderTouchMonoCtrl.OnSlideRight += OnSlideRight;
             sliderTouchMonoCtrl.OnSlideUp += OnSlideUp;
             sliderTouchMonoCtrl.OnSlideDown += OnSlideDown;
+        }
+        public override void Run()
+        {
+
 
         }
 
         public override void Loop()
         {
             
-
         }
 
         /// <summary>
@@ -50,28 +55,27 @@ namespace HotUpdateScripts
         /// </summary>
         public void OnRoleStop()
         {
-            roleMonoCtrl.StopRole();
-            
+            roleMove.Pause();
         }
         /// <summary>
         /// 继续角色动作
         /// </summary>
         public void OnRoleContinue()
         {
-            roleMonoCtrl.ContinueRole();
-
+            roleMove.Resume();
         }
 
         public void OnSlideLeft()
         {
             Log.Print("OnSlideLeft");
-            roleMonoCtrl.TurnLeftOrRight(true);
-
+            //roleMonoCtrl.TurnLeftOrRight(true);
+            roleMove.TurnLeftOrRight(true);
         }
         public void OnSlideRight()
         {
             Log.Print("OnSlideRight");
-            roleMonoCtrl.TurnLeftOrRight(false);
+            //roleMonoCtrl.TurnLeftOrRight(false);
+            roleMove.TurnLeftOrRight(false);
 
         }
         public void OnSlideUp()
@@ -105,7 +109,6 @@ namespace HotUpdateScripts
         public void OnCollisionEnter(Collision collider)
         {
             Log.Print("CollisionEnter:" + collider.collider.name);
-
         }
 
         public override void End()
@@ -114,9 +117,8 @@ namespace HotUpdateScripts
             sliderTouchMonoCtrl.OnSlideRight -= OnSlideRight;
             sliderTouchMonoCtrl.OnSlideUp -= OnSlideUp;
             sliderTouchMonoCtrl.OnSlideDown -= OnSlideDown;
-
-            GameObject.Destroy(roleMonoCtrl);
-			GameObject.Destroy(sliderTouchMonoCtrl);
+            //gameObject.RemoveJBehaviour<RoleMove>();
+            //GameObject.Destroy(sliderTouchMonoCtrl);
 
         }
 

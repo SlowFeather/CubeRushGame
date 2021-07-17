@@ -175,9 +175,7 @@ namespace HotUpdateScripts
             Game.mainCamera.gameObject.RemoveJBehaviour<CameraCtrl>();
             Game.mainCamera.clearFlags = CameraClearFlags.Depth;
             //移除角色脚本
-            roleGameObject.RemoveJBehaviour<RoleCtrl>();
-
-
+            //roleGameObject.RemoveJBehaviour<RoleCtrl>();
 
             //删除场景中的东西
             GameObject.Destroy(roleGameObject);

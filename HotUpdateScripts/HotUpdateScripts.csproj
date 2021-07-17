@@ -30,6 +30,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CubeRushHotFix\Controller\JBCtrl\Game\RoleMove.cs" />
     <Compile Include="CubeRushHotFix\GarbageFolder\HeroCtrl.cs" />
     <Compile Include="CubeRushHotFix\Controller\JBCtrl\Game\CameraCtrl.cs" />
     <Compile Include="CubeRushHotFix\Game.cs" />
