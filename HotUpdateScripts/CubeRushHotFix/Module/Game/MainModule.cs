@@ -39,12 +39,24 @@ namespace HotUpdateScripts
             JPrefab jPrefab = new JPrefab("Game/Game/Role/role0",(b,pre)=> {
                 roleGameObject = pre.Instantiate();
                 roleGameObject.transform.position = new Vector3(0, 0f, 0);
-
+                Log.PrintError("生成"+roleGameObject.name);
+                //添加玩家控制脚本
+                RoleCtrl roleCtrl=roleGameObject.CreateJBehaviour<RoleCtrl>();
                 //添加玩家移动脚本
-                //roleGameObject.AddComponent<HeroCtrl>();
-                RoleCtrl roleCtrl=roleGameObject.CreateJBehaviour<RoleCtrl>(false);
-                roleCtrl.Activate();
-                Log.Print("添加RoleCtrl到role");
+                RoleMove roleMove = roleGameObject.CreateJBehaviour<RoleMove>();
+                //添加触摸屏幕脚本
+                SliderTouchMonoCtrl sliderTouchMonoCtrl = roleGameObject.AddComponent<SliderTouchMonoCtrl>();
+                //添加碰撞脚本
+                RoleMonoCtrl roleMonoCtrl=roleGameObject.AddComponent<RoleMonoCtrl>();
+
+                //给脚本赋值
+                roleMonoCtrl.roleCtrl = roleCtrl;
+                sliderTouchMonoCtrl.OnSlideLeft += roleCtrl.OnSlideLeft;
+                sliderTouchMonoCtrl.OnSlideRight += roleCtrl.OnSlideRight;
+                sliderTouchMonoCtrl.OnSlideUp += roleCtrl.OnSlideUp;
+                sliderTouchMonoCtrl.OnSlideDown += roleCtrl.OnSlideDown;
+
+
 
 
                 //添加相机跟随脚本

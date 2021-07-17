@@ -53,6 +53,20 @@ namespace ILRuntime.Runtime.Generated
                     }
                 }
             }
+            args = new Type[]{typeof(global::CoroutineAdapter.Adaptor)};
+            if (genericMethods.TryGetValue("CreateInstance", out lst))
+            {
+                foreach(var m in lst)
+                {
+                    if(m.MatchGenericParameters(args, typeof(global::CoroutineAdapter.Adaptor)))
+                    {
+                        method = m.MakeGenericMethod(args);
+                        app.RegisterCLRMethodRedirection(method, CreateInstance_2);
+
+                        break;
+                    }
+                }
+            }
 
 
         }
@@ -87,6 +101,22 @@ namespace ILRuntime.Runtime.Generated
 
             var result_of_this_method = System.Activator.CreateInstance<ILRuntime.Runtime.Intepreter.ILTypeInstance>();
 
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* CreateInstance_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 0);
+
+
+            var result_of_this_method = System.Activator.CreateInstance<global::CoroutineAdapter.Adaptor>();
+
+            object obj_result_of_this_method = result_of_this_method;
+            if(obj_result_of_this_method is CrossBindingAdaptorType)
+            {    
+                return ILIntepreter.PushObject(__ret, __mStack, ((CrossBindingAdaptorType)obj_result_of_this_method).ILInstance);
+            }
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 

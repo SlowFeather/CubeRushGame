@@ -25,6 +25,9 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(UnityEngine.Events.UnityAction)};
             method = type.GetMethod("AddListener", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, AddListener_0);
+            args = new Type[]{typeof(UnityEngine.Events.UnityAction)};
+            method = type.GetMethod("RemoveListener", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, RemoveListener_1);
 
 
         }
@@ -45,6 +48,25 @@ namespace ILRuntime.Runtime.Generated
             __intp.Free(ptr_of_this_method);
 
             instance_of_this_method.AddListener(@call);
+
+            return __ret;
+        }
+
+        static StackObject* RemoveListener_1(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            UnityEngine.Events.UnityAction @call = (UnityEngine.Events.UnityAction)typeof(UnityEngine.Events.UnityAction).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            UnityEngine.Events.UnityEvent instance_of_this_method = (UnityEngine.Events.UnityEvent)typeof(UnityEngine.Events.UnityEvent).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            instance_of_this_method.RemoveListener(@call);
 
             return __ret;
         }

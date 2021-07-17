@@ -28,6 +28,9 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.Object)};
             method = type.GetMethod("PrintError", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, PrintError_1);
+            args = new Type[]{typeof(System.Object)};
+            method = type.GetMethod("PrintWarning", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, PrintWarning_2);
 
 
         }
@@ -61,6 +64,22 @@ namespace ILRuntime.Runtime.Generated
 
 
             JEngine.Core.Log.PrintError(@message);
+
+            return __ret;
+        }
+
+        static StackObject* PrintWarning_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Object @message = (System.Object)typeof(System.Object).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+
+            JEngine.Core.Log.PrintWarning(@message);
 
             return __ret;
         }

@@ -112,7 +112,6 @@ namespace HotUpdateScripts
 		private float moveActionProcess = 0;
 		public void RoleMoveWorker()
         {
-			//Log.Print(this.f)
             if (isMoveAction==true)
             {
 				//还在运动中

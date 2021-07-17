@@ -169,6 +169,23 @@ namespace ILRuntime.Runtime.Generated
             ProtoBuf_Serializer_Binding.Register(app);
             libx_Reference_Binding.Register(app);
             System_Action_2_Boolean_CoroutineAdapter_Binding_Adaptor_Binding.Register(app);
+            UnityEngine_Input_Binding.Register(app);
+            UnityEngine_Time_Binding.Register(app);
+            UnityEngine_Physics_Binding.Register(app);
+            UnityEngine_RaycastHit_Binding.Register(app);
+            UnityEngine_Rigidbody_Binding.Register(app);
+            UnityEngine_WaitForSeconds_Binding.Register(app);
+            UnityEngine_Collision_Binding.Register(app);
+            UnityEngine_Screen_Binding.Register(app);
+            System_Action_1_Object_Binding_t1.Register(app);
+            System_Reflection_MethodInfo_Binding.Register(app);
+            UnityEngine_Camera_Binding.Register(app);
+            UnityEngine_QualitySettings_Binding.Register(app);
+            System_Collections_Generic_List_1_GameObject_Binding_Enumerator_Binding.Register(app);
+            System_Collections_Generic_List_1_Int32_Binding.Register(app);
+            DG_Tweening_ShortcutExtensions_Binding.Register(app);
+            DG_Tweening_TweenSettingsExtensions_Binding.Register(app);
+            System_Collections_Generic_Dictionary_2_String_String_Binding.Register(app);
         }
 
         /// <summary>

@@ -34,6 +34,9 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{};
             method = type.GetMethod("get_targetFrameRate", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, get_targetFrameRate_3);
+            args = new Type[]{typeof(System.Int32)};
+            method = type.GetMethod("set_targetFrameRate", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, set_targetFrameRate_4);
 
 
         }
@@ -87,6 +90,21 @@ namespace ILRuntime.Runtime.Generated
             __ret->ObjectType = ObjectTypes.Integer;
             __ret->Value = result_of_this_method;
             return __ret + 1;
+        }
+
+        static StackObject* set_targetFrameRate_4(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Int32 @value = ptr_of_this_method->Value;
+
+
+            UnityEngine.Application.targetFrameRate = value;
+
+            return __ret;
         }
 
 
